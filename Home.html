@@ -4,14 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-
     <title>Home Page</title>
 </head>
 <body style="background-color: #121212; color: white; margin: 0; font-family: Arial, sans-serif;">
     <nav style="display: flex; align-items: center; justify-content: space-between; background-color: #1f1f1f; padding: 10px;">
         <div style="display: flex; align-items: center; gap: 10px;">
             <img src="images/logo.png" alt="Dream Stay Logo" style="width: 100px; height: auto;">
-<a href="/Home.html" style="text-decoration: none; color: white; font-size: xx-large; font-weight: bolder;">Dream Stay</a>
+            <a href="/Home.html" style="text-decoration: none; color: white; font-size: xx-large; font-weight: bolder;">Dream Stay</a>
         </div>
         <div style="display: flex; justify-content: center; flex-grow: 1; gap: 40px;">
             <a href="Home.html" style="text-decoration: none; font-size: x-large; color: white;font-weight: bolder;">Home</a>
@@ -33,52 +32,51 @@
         <div style="max-width: 1000px; margin: auto; background-color: #fff; border-radius: 30px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); padding: 20px;">
             <h2 style="text-align: center; font-size: 2rem; margin-bottom: 20px;color:black;">Find Your Perfect Stay</h2>
             
-            <form style="display: flex; justify-content: space-between; gap: 15px; flex-wrap: nowrap; align-items: center;">
+            <form id="searchForm" style="display: flex; justify-content: space-between; gap: 15px; flex-wrap: nowrap; align-items: center;">
 
                 <div style="flex: 2; min-width: 220px;">
-                    <input type="text" placeholder="Search by city or hotel" 
+                    <input id="searchCity" type="text" placeholder="Search by city or hotel" 
                         style="width: 100%; padding: 15px; font-size: 1rem; border-radius: 8px; border: 1px solid #ddd; outline: none; box-sizing: border-box; transition: all 0.3s ease;">
                 </div>
 
                 <div style="flex: 1; min-width: 220px;">
-                    <input type="date" 
+                    <input id="checkIn" type="date" 
                         style="width: 100%; padding: 15px; font-size: 1rem; border-radius: 8px; border: 1px solid #ddd; outline: none; box-sizing: border-box; transition: all 0.3s ease;">
                 </div>
 
                 <div style="flex: 1; min-width: 220px;">
-                    <input type="date" 
+                    <input id="checkOut" type="date" 
                         style="width: 100%; padding: 15px; font-size: 1rem; border-radius: 8px; border: 1px solid #ddd; outline: none; box-sizing: border-box; transition: all 0.3s ease;">
                 </div>
 
                 <div style="flex: 1; min-width: 220px;">
-                    <input type="number" placeholder="Guests" min="1" 
+                    <input id="guests" type="number" placeholder="Guests" min="1" 
                         style="width: 100%; padding: 15px; font-size: 1rem; border-radius: 8px; border: 1px solid #ddd; outline: none; box-sizing: border-box; transition: all 0.3s ease;">
                 </div>
 
                 <div style="flex: 0.5; min-width: 80px; text-align: center;">
-                    <a href="Hotel.html" 
+                    <button type="button" id="searchBtn" 
                         style="background: none; border: none; font-size: 2rem; cursor: pointer; color:black;">
                         <i class="fas fa-search" style="color: white;background-color: blue;padding: 8px;border-radius: 50px;"></i>
-                    </a>
+                    </button>
                 </div>
 
             </form>
         </div>
     </div>
 
-
     
     <div style="display: flex; justify-content: center; gap: 50px; padding: 20px;margin-top: 10%;box-shadow: #1f1f1f;border-radius: 50px;">
-    <div style="padding: 50px; text-align: left; color:white;">
-        <h1 style="font-size: 2.5rem;">Offers</h1>
-        <h3 style="font-size: 1.5rem;">Promotions, deals, and special offers for you</h3>
-    </div>
+        <div style="padding: 50px; text-align: left; color:white;">
+            <h1 style="font-size: 2.5rem;">Offers</h1>
+            <h3 style="font-size: 1.5rem;">Promotions, deals, and special offers for you</h3>
+        </div>
         <div style="background-color: white; border-radius: 20px; width: 600px; height: 250px; padding: 20px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); display: flex; flex-direction: row; align-items: center; justify-content: space-between;">
             <div style="flex: 1; text-align: left;">
                 <strong style="font-size: 1.2rem; color: black;">Black Friday Deals</strong>
                 <h2 style="font-size: 1.8rem; color: #333;">Save 20% on airport transfers</h2>
                 <p style="font-size: 1.1rem; color: #555;">Just landed or heading home? Ride stress-free for less.</p>
-                <button style="margin-top: 20px; padding: 10px 20px; background-color: #007BFF; color: white; font-weight: bold; border: none; border-radius: 30px; cursor: pointer; transition: background-color 0.3s;">
+                <button class="explore-deals-btn" style="margin-top: 20px; padding: 10px 20px; background-color: #007BFF; color: white; font-weight: bold; border: none; border-radius: 30px; cursor: pointer; transition: background-color 0.3s;">
                     Explore Deals
                 </button>
             </div>
@@ -92,7 +90,7 @@
                 <strong style="font-size: 1.2rem; color: black;">Holiday Deals</strong>
                 <h2 style="font-size: 1.8rem; color: #333;">Save 15% on hotel bookings</h2>
                 <p style="font-size: 1.1rem; color: #555;">Book your dream stay at a special price.</p>
-                <button style="margin-top: 20px; padding: 10px 20px; background-color: #007BFF; color: white; font-weight: bold; border: none; border-radius: 30px; cursor: pointer; transition: background-color 0.3s;">
+                <button class="explore-deals-btn" style="margin-top: 20px; padding: 10px 20px; background-color: #007BFF; color: white; font-weight: bold; border: none; border-radius: 30px; cursor: pointer; transition: background-color 0.3s;">
                     Explore Deals
                 </button>
             </div>
@@ -106,13 +104,13 @@
     <div style="margin: 5%;border: 1px solid white;">
 
     </div>
-<div style="display: flex; justify-content: space-between; flex-wrap: wrap; padding: 20px; margin-top: 5%;">
-<div style="padding: 50px; text-align: left; color:white;">
-        <h1 style="font-size: 2.5rem;">Stay at our top unique <br>properties
-</h1>
-        <h3 style="font-size: 1.5rem;">From castles and villas to boats<br> and igloos, we've got it all
-</h3>
-    </div>
+    <div id="uniqueProperties" style="display: flex; justify-content: space-between; flex-wrap: wrap; padding: 20px; margin-top: 5%;">
+        <div style="padding: 50px; text-align: left; color:white;">
+            <h1 style="font-size: 2.5rem;">Stay at our top unique <br>properties
+            </h1>
+            <h3 style="font-size: 1.5rem;">From castles and villas to boats<br> and igloos, we've got it all
+            </h3>
+        </div>
     
         <div style="background-color: white; border-radius: 20px; width: 250px; height: 350px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); overflow: hidden; text-align: center; display: flex; flex-direction: column; align-items: center;">
             <img src="Images/lahore.jpg" alt="Lahore" style="width: 100%; height: 200px; object-fit: cover;">
@@ -139,10 +137,10 @@
         </div>
 
     </div>
-<div style="margin: 5%;border: 1px solid white;">
+    <div style="margin: 5%;border: 1px solid white;">
 
-</div>
-   <div style="display: flex; justify-content: flex-start; padding: 50px 10%; color: white; margin-top: 5%;">
+    </div>
+    <div style="display: flex; justify-content: flex-start; padding: 50px 10%; color: white; margin-top: 5%;">
         <h1 style="font-size: 2.5em; color: white;">Why Dream Stay?</h1>
     </div>
 
@@ -157,37 +155,36 @@
         <div style="background-color: white; width: 35%; border-radius: 20px; margin: 10px; padding: 20px; text-align: center; height: 220px;">
             <img src="/Images/Reviews.png" style="width: 30%;"><br>
             <strong style="font-size: 1.2rem; color: black;">300M+ reviews from fellow travellers
-</strong>
+            </strong>
             <p style=" color: black">Get trusted information from guests like you
 
-</p>
+            </p>
         </div>
 
         <div style="background-color: white; width: 35%; border-radius: 20px; margin: 10px; padding: 20px; text-align: center; height: 220px;">
             <img src="/Images/TripsGlobe.png" style="width: 30%;"><br>
             <strong style="font-size: 1.2rem; color: black;">2+ million properties worldwide
-</strong>
+            </strong>
             <p style=" color: black">Hotels, guest houses, apartments, and more…
 
-</p>
+            </p>
         </div>
 
         <div style="background-color: white; width: 35%; border-radius: 20px; margin: 10px; padding: 20px; text-align: center; height: 220px;">
             <img src="/Images/CustomerSupport.png" style="width: 30%;"><br>
             <strong style="font-size: 1.2rem; color: black;">Trusted customer service you can rely on, 24/7
-</strong>
+            </strong>
             <p style=" color: black">We're always here to help
 
-</p>
+            </p>
         </div>
 
-
-
-</div>
-<div style="margin: 5%;border: 1px solid white;"></div>
-<div style="display: flex; justify-content: flex-start; padding: 50px 10%; color: white; margin-top: 5%;">
+    </div>
+    <div style="margin: 5%;border: 1px solid white;"></div>
+    <div style="display: flex; justify-content: flex-start; padding: 50px 10%; color: white; margin-top: 5%;">
         <h1 style="font-size: 2.5em; color: white;">Travel More Spend Less</h1>
-    </div>   <div style="display: flex; justify-content: space-between; align-items: center; padding: 30px; width: 70%; margin-left: auto; margin-right: auto; background-color: white; border-radius: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+    </div>
+    <div id="dealsSection" style="display: flex; justify-content: space-between; align-items: center; padding: 30px; width: 70%; margin-left: auto; margin-right: auto; background-color: white; border-radius: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
 
         <div style="flex: 1; text-align: left; padding-right: 20px;margin: 10px;">
             <strong style="font-size: 1.5rem; color: black;margin: 10px;">Sign In Save Money</strong><br>
@@ -227,7 +224,7 @@
 
             <div style="flex: 1; min-width: 250px;">
                 <h3 style="color: #FF5A5F;">Terms and Conditions</h3>
-                                <ul style="list-style-type: none; padding: 0;">
+                <ul style="list-style-type: none; padding: 0;">
                     <li><a href="Home.html" style="color: white; text-decoration: none; font-weight: bold;font-size: larger;">Home</a></li><br>
                     <li><a href="Aboutus.html" style="color: white; text-decoration: none;font-weight: bold;font-size: larger;">About Us</a></li><br>
                     <li><a href="Hotel.html" style="color: white; text-decoration: none;font-weight: bold;font-size: larger;">Hotels</a></li><br>
@@ -240,5 +237,64 @@
 
         <p>&copy 2025 Dream Stay. All rights reserved.</p>
     </footer>
+
+    <script>
+        const searchBtn = document.getElementById("searchBtn");
+        const searchCity = document.getElementById("searchCity");
+        const checkIn = document.getElementById("checkIn");
+        const checkOut = document.getElementById("checkOut");
+        const guests = document.getElementById("guests");
+
+        function handleSearch() {
+            const cityValue = searchCity.value.trim();
+            const checkInValue = checkIn.value;
+            const checkOutValue = checkOut.value;
+            const guestsValue = guests.value;
+
+            if (!cityValue || !checkInValue || !checkOutValue || !guestsValue) {
+                alert("Please fill in all fields before searching.");
+                return;
+            }
+
+            const inDate = new Date(checkInValue);
+            const outDate = new Date(checkOutValue);
+            if (outDate <= inDate) {
+                alert("Check-out date must be after check-in date.");
+                return;
+            }
+
+            if (parseInt(guestsValue, 10) <= 0) {
+                alert("Guests must be at least 1.");
+                return;
+            }
+
+            const params = new URLSearchParams();
+            params.set("city", cityValue);
+            params.set("checkIn", checkInValue);
+            params.set("checkOut", checkOutValue);
+            params.set("guests", guestsValue);
+
+            window.location.href = "Hotel.html?" + params.toString();
+        }
+
+        searchBtn.addEventListener("click", handleSearch);
+
+        const searchForm = document.getElementById("searchForm");
+        searchForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            handleSearch();
+        });
+
+        const dealButtons = document.querySelectorAll(".explore-deals-btn");
+        const dealsSection = document.getElementById("dealsSection");
+
+        dealButtons.forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                if (dealsSection) {
+                    dealsSection.scrollIntoView({ behavior: "smooth" });
+                }
+            });
+        });
+    </script>
 </body>
 </html>
